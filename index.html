@@ -1,0 +1,37 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>미로 추격전 게임</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="wrap">
+<h2>미로 추격전 — 탈출을 목표로 하세요!</h2>
+<div class="hud">
+<div class="panel">시간: <span id="time">0.0</span>s</div>
+<div class="panel">점수: <span id="score">0</span></div>
+<div class="panel">목숨: <span id="lives">3</span></div>
+<div class="controls">
+<button id="resetBtn">새 게임</button>
+<button id="regenBtn">미로 재생성</button>
+</div>
+</div>
+
+
+<canvas id="game" width="720" height="720"></canvas>
+
+
+<div id="touch-pad">
+<div style="display:grid;grid-template-columns:repeat(3,46px);grid-gap:6px;">
+<div></div><div class="dir" data-dir="up">▲</div><div></div>
+<div class="dir" data-dir="left">◀</div><div class="dir" data-dir="down">▼</div><div class="dir" data-dir="right">▶</div>
+</div>
+</div>
+
+
+<p style="max-width:720px;opacity:.9">검은색 플레이어는 탈출을 목표로, 파란색 추격자는 당신을 쫓습니다. WASD 또는 화살표로 조작하세요.</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
